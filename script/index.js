@@ -1,17 +1,30 @@
-console.log("Hello,World!");
+// Assignment 1
 
-let firstName = "Ellen";
-let age = 21;
-let favColor = "green";
+// console.log("Hello,World!");
 
-console.log(`My name is ${firstName}`);
-console.log(`I am ${age} years old`);
-console.log(`My favorite color is ${favColor}`);
+// let firstName = "Ellen";
+// let age = 21;
+// let favColor = "green";
 
-let x = 100;
-let y = 5;
+// console.log(`My name is ${firstName}`);
+// console.log(`I am ${age} years old`);
+// console.log(`My favorite color is ${favColor}`);
 
-console.log(x + y)
-console.log(x - y)
-console.log(x / y)
-console.log(x * y)
+// let x = 100;
+// let y = 5;
+
+// console.log(x + y)
+// console.log(x - y)
+// console.log(x / y)
+// console.log(x * y)
+
+
+// Assignment 2
+
+let price = prompt("price in $ ex. $50");
+let priceNumber = price.slice(1);
+let discount = (0.9);
+let discoundedPrice = (priceNumber * discount);
+let discoundedPrice$ = ("$" + discoundedPrice);
+
+console.log(`Your discounted price is ${discoundedPrice$}`);
