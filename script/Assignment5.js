@@ -60,8 +60,11 @@ function atm() {
             break;
 
         case 5:
-            console.clear();
-            console.log ("logged out")
+            function logOut() {
+                console.clear();
+                console.log ("logged out")
+        }
+        logOut()
         break;
 
         default:
