@@ -1,12 +1,12 @@
 let account = {
     accountName: "Ellen Sällberg",
-    balance: 1000
+    balance: 0
 }
 console.log(account);
 
 function atm() {
     const message = parseFloat(
-        prompt("1.) See Balance 2.) Make a deposit 3.) Make a withdrawl 4.) Get account name"
+        prompt("1.) See Balance 2.) Make a deposit 3.) Make a withdrawl 4.) Get account name 5.) Exit"
         )
     );
 
@@ -16,6 +16,7 @@ function atm() {
                 console.log (account.balance)
             }
             getBalance();
+            atm();
             break;
 
         case 2:
@@ -23,9 +24,15 @@ function atm() {
             const depositAmount = parseFloat(
                 prompt("How much would you like to deposit?")
                 )
-                account.balance = (account.balance + depositAmount);
+                if (depositAmount < 0) {
+                    console.log ("invalid amount")
+                }
+                else {
+                    account.balance = (account.balance + depositAmount);
+                }
             }
             deposit()
+            atm();
             break;
 
         case 3:
@@ -33,9 +40,15 @@ function atm() {
             const withdrawlAmount = parseFloat(
                 prompt("How much would you like to withdrawl?")
                 )
-                account.balance = (account.balance - withdrawlAmount);
+                if (withdrawlAmount < 0) {
+                    console.log ("invalid amount")
+                }
+                else {
+                    account.balance = (account.balance - withdrawlAmount);   
+                }
             }
             withdrawl()
+            atm();
             break;
 
         case 4:
@@ -43,7 +56,18 @@ function atm() {
                 console.log (account.accountName)
             }
             getAccountName();
+            atm();
             break;
+
+        case 5:
+            console.clear();
+            console.log ("logged out")
+        break;
+
+        default:
+        console.log ("invalid choice")
+        atm();
+        break;
     }
 }
 atm()
